@@ -1,4 +1,4 @@
-#pragma onve
+#pragma once
 #include <string>
 #include <memory>
 #include <vector>
@@ -26,11 +26,19 @@ struct VariableExpr : public Expr {
     std::string name;
 };
 
-struct BinaryExpre : public Expr {
+struct BinaryExpr : public Expr {
     std::string Operator;
     std::unique_ptr<Expr> left;
     std::unique_ptr<Expr> right;
 };
 
 
+struct AssignmentStmt : public ASTnode {
+    std::string variableName;
+    std::unique_ptr<Expr> expr;
+};
+
+struct Program : public ASTnode {
+    std::vector<std::unique_ptr<ASTnode>> statements;
+};
 
