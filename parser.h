@@ -9,19 +9,16 @@ class parser {
 public:
     explicit parser(lexer& lexer);
 
-    // Punto de entrada: parsea todo el programa
     std::unique_ptr<Program> parseProgram();
 
 private:
     lexer& _lexer;
     Token currentToken;
 
-    // Funciones auxiliares
-    void advance();  // lee siguiente token
-    bool match(TokenType expected);  // si coincide, consume
+    void advance();  
+    bool match(TokenType expected); 
     void expect(TokenType expected, const std::string& message);
 
-    // Reglas de la gramática
     std::unique_ptr<ASTnode> parseStatement();
     std::unique_ptr<AssignmentStmt> parseAssignment();
 
