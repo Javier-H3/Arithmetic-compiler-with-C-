@@ -10,7 +10,7 @@ struct SymbolInfo {
     ValueType type;
 };
 
-class symbol_table {
+class SymbolTable {
 
     private:
         std::unordered_map<std::string, SymbolInfo> table;
