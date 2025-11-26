@@ -30,14 +30,14 @@ private:
     int col;
 
     char peek() const;
-    char get() const;
+    char get();
     void skipWhiteSpace();
     Token identifier();
     Token number();    
     
 public:
      explicit lexer(const std::string& input);
-     Token genNextToken();
+     Token getNextToken();
 };
 
 
