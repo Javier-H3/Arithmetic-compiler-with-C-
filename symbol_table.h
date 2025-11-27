@@ -37,7 +37,7 @@ class SymbolTable {
         }
 
         void print() const {
-            std::cout << "===== TABLA DE SÍMBOLOS =====\n";
+            std::cout << "===== TABLA DE SIMBOLOS =====\n";
             std::cout << "Nombre\tTipo\n";
             std::cout << "-----------------------------\n";
                 for (const auto& [k, sym] : table) {

@@ -31,11 +31,11 @@ public:
         for (auto &row : addTable) row.fill(ValueType::type_error);
         for (auto &row : mulTable) row.fill(ValueType::type_error);
 
-        addTable[(int)ValueType::type_int][(int)ValueType::type_int]     = ValueType::type_int;
-        addTable[(int)ValueType::type_int][(int)ValueType::type_float]   = ValueType::type_float;
+        addTable[(int)ValueType::type_int]  [(int)ValueType::type_int]   = ValueType::type_int;
+        addTable[(int)ValueType::type_int]  [(int)ValueType::type_float] = ValueType::type_float;
         addTable[(int)ValueType::type_float][(int)ValueType::type_int]   = ValueType::type_float;
-        addTable[(int)ValueType::type_float][(int)ValueType::type_float] = ValueType::type_int;
-
+        addTable[(int)ValueType::type_float][(int)ValueType::type_float] = ValueType::type_float;
+        
         mulTable = addTable;
     }
 
